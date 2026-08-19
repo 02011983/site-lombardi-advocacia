@@ -231,6 +231,27 @@
     color: var(--cream); margin-bottom: 12px; line-height: 1.3;
   }
   .dif-item p { font-size: 13.5px; color: var(--taupe); line-height: 1.75; font-weight: 300; }
+  /* ═══ DEPOIMENTOS ═══ */
+  .depoimentos { background: var(--offwhite); }
+  .depoimentos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .depoimento-card {
+    background: var(--white); padding: 40px 40px 34px; position: relative;
+    border: 1px solid rgba(198,168,130,0.15);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+  }
+  .depoimento-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(44,31,20,0.08); }
+  .depoimento-quote {
+    font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600;
+    color: var(--gold); line-height: 0.6; margin-bottom: 18px; opacity: 0.55;
+  }
+  .depoimento-stars { color: var(--gold); font-size: 14px; letter-spacing: 3px; margin-bottom: 18px; }
+  .depoimento-text {
+    font-size: 14.5px; color: var(--text-body); line-height: 1.85;
+    margin-bottom: 28px; font-weight: 300; font-style: italic;
+  }
+  .depoimento-author { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-top: 20px; border-top: 1px solid var(--cream); flex-wrap: wrap; }
+  .depoimento-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--brown-dark); }
+  .depoimento-meta { font-size: 10.5px; color: var(--text-light); letter-spacing: 0.5px; }
   /* ═══ CTA ═══ */
   .cta-section {
     background: linear-gradient(160deg, var(--cream) 0%, var(--cream-light) 100%);
@@ -327,6 +348,7 @@
     .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
     .sobre-photo-wrap::after { right: -12px; top: 12px; }
     .dif-grid { grid-template-columns: 1fr; gap: 36px; }
+    .depoimentos-grid { grid-template-columns: 1fr; }
     .footer-inner { grid-template-columns: 1fr; gap: 36px; }
     .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
     .cta-section { padding: 80px 24px; }
@@ -343,6 +365,7 @@
       <a href="#servicos">Atuação</a>
       <a href="#sobre">A advogada</a>
       <a href="#diferenciais">Diferenciais</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato" class="nav-cta">Fale conosco</a>
     </div>
     <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
@@ -492,6 +515,51 @@
         <div class="dif-num">06</div>
         <h3>Foco em resultado, não em volume</h3>
         <p>Priorizamos a redução do passivo e a mitigação de riscos futuros. O sucesso se mede pela economia gerada, não pelo número de processos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="depoimentos" id="depoimentos">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">Depoimentos</div>
+    <h2 class="section-title reveal">Quem já trabalhou conosco <em>recomenda</em></h2>
+    <p class="section-desc reveal">Avaliações reais de clientes, publicadas no perfil do escritório no Google.</p>
+    <div class="depoimentos-grid">
+      <div class="depoimento-card reveal">
+        <div class="depoimento-quote">&ldquo;</div>
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">Excelente profissional! A dra Daniella demonstrou grande conhecimento, comprometimento e dedicação ao meu caso. Sempre atenciosa e eficiente, me passou segurança em cada etapa do processo. Recomendo!</p>
+        <div class="depoimento-author">
+          <span class="depoimento-name">Murilo Minorelli</span>
+          <span class="depoimento-meta">Avaliação no Google · mar/2025</span>
+        </div>
+      </div>
+      <div class="depoimento-card reveal reveal-d1">
+        <div class="depoimento-quote">&ldquo;</div>
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">Indico sem receio, profissional competente, qualificada e prestativa.</p>
+        <div class="depoimento-author">
+          <span class="depoimento-name">Rosana Feitoza</span>
+          <span class="depoimento-meta">Local Guide · Avaliação no Google · dez/2024</span>
+        </div>
+      </div>
+      <div class="depoimento-card reveal reveal-d2">
+        <div class="depoimento-quote">&ldquo;</div>
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">Excelente profissional, comprometida e muito experiente!!!</p>
+        <div class="depoimento-author">
+          <span class="depoimento-name">Patricia Horgos</span>
+          <span class="depoimento-meta">Avaliação no Google · dez/2024</span>
+        </div>
+      </div>
+      <div class="depoimento-card reveal reveal-d1">
+        <div class="depoimento-quote">&ldquo;</div>
+        <div class="depoimento-stars">★★★★★</div>
+        <p class="depoimento-text">Dra. Daniella é muito atualizada, com conhecimento sólido a respeito das leis trabalhistas e, dessa forma, me ofereceu soluções estratégicas e adequadas a minha causa. Responde minhas dúvidas com clareza, rapidez e paciência — sem falar na linguagem acessível —, mantendo-me sempre informada com relação ao processo. Eu admiro e confio muito na profissional e na pessoa. Super recomendo.</p>
+        <div class="depoimento-author">
+          <span class="depoimento-name">Renata Antoniassi</span>
+          <span class="depoimento-meta">Local Guide · Avaliação no Google · dez/2024</span>
+        </div>
       </div>
     </div>
   </div>
