@@ -11,6 +11,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied'});
   gtag('js', new Date());
   gtag('config', 'G-V4KK1M21JL');
 </script>
@@ -266,6 +267,35 @@
 </a>
 <script>
   window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+</script>
+<style id="cookie-style">
+#cookie-aviso{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:760px;margin:0 auto;background:#2C1F14;color:#EDE5D8;border:1px solid rgba(198,168,130,.35);box-shadow:0 12px 40px rgba(0,0,0,.28);padding:18px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-family:'Inter',system-ui,sans-serif;font-size:13px;line-height:1.6}
+#cookie-aviso p{margin:0;flex:1 1 320px;color:#D8CDC0}
+#cookie-aviso a{color:#EDE5D8;text-decoration:underline;text-underline-offset:3px}
+#cookie-aviso .cookie-btns{display:flex;gap:10px;flex:0 0 auto}
+#cookie-aviso button{font:inherit;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:11px 20px;cursor:pointer;border:1px solid #EDE5D8;background:transparent;color:#EDE5D8}
+#cookie-aviso button.cookie-ok{background:#EDE5D8;color:#2C1F14}
+#cookie-aviso button:focus-visible{outline:2px solid #B8956A;outline-offset:2px}
+@media(max-width:600px){#cookie-aviso{padding:16px}#cookie-aviso .cookie-btns{width:100%}#cookie-aviso button{flex:1}}
+</style>
+<script id="cookie-script">
+(function(){
+  var KEY='cookie_consent_v1', v=null;
+  try{v=localStorage.getItem(KEY);}catch(e){}
+  function upd(ok){ if(typeof gtag==='function'){ gtag('consent','update',{analytics_storage: ok?'granted':'denied'}); } }
+  if(v==='granted'){ upd(true); return; }
+  if(v==='denied'){ return; }
+  function save(val){ try{localStorage.setItem(KEY,val);}catch(e){} }
+  function show(){
+    var d=document.createElement('div');
+    d.id='cookie-aviso'; d.setAttribute('role','dialog'); d.setAttribute('aria-label','Aviso de cookies');
+    d.innerHTML='<p>Este site usa cookies de análise (Google Analytics) para entender, de forma agregada, como as páginas são acessadas. Você pode aceitar ou recusar e continuar navegando normalmente. Saiba mais na <a href="politica-privacidade.html">Política de Privacidade</a>.</p><div class="cookie-btns"><button type="button" class="cookie-no">Recusar</button><button type="button" class="cookie-ok">Aceitar</button></div>';
+    document.body.appendChild(d);
+    d.querySelector('.cookie-ok').addEventListener('click',function(){save('granted');upd(true);d.remove();});
+    d.querySelector('.cookie-no').addEventListener('click',function(){save('denied');upd(false);d.remove();});
+  }
+  if(document.body){show();}else{document.addEventListener('DOMContentLoaded',show);}
+})();
 </script>
 </body>
 </html>

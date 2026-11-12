@@ -11,6 +11,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied'});
   gtag('js', new Date());
   gtag('config', 'G-V4KK1M21JL');
 </script>
@@ -545,6 +546,67 @@
   .faq-answer { padding: 0 0 24px; font-size: 15px; line-height: 1.8; color: var(--text-body); font-weight: 300; }
   .faq-answer a { color: var(--brown); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
   @media (max-width: 768px) { .faq-item summary { font-size: 19px; } }
+
+  /* ═══ CAPA ESCURA + CONTEÚDO CLARO | OPÇÃO 3 APROVADA ═══ */
+  /* Hero e cenário de riscos escuros; serviços e apresentação claros. */
+  nav, nav.scrolled {
+    background: rgba(44,31,20,.97);
+    border-bottom: 1px solid rgba(198,168,130,.18);
+  }
+  nav.scrolled { box-shadow: 0 1px 24px rgba(17,10,6,.2); }
+  .nav-logo { filter: brightness(0) invert(1); }
+  .nav-links a { color: #F0E8DE; }
+  .nav-links a:hover { color: #D8B78B; }
+  .nav-links a::after { background: #D8B78B; }
+  .nav-cta { background: #C4A882 !important; color: #2C1F14 !important; }
+  .nav-cta:hover { background: #E4D1B8 !important; }
+  .menu-toggle span { background: #F0E8DE; }
+  .hero { background: #2C1F14; }
+  .hero-bg { background: #35261B; }
+  .hero h1 { color: #F5EDE4; margin-bottom: 24px; }
+  .hero h1 em { color: #D8B78B; }
+  .hero-sub { color: #D8CDC0; margin-bottom: 18px; }
+  .hero-signature {
+    color: #D8B78B; font-size: 15px; line-height: 1.65;
+    font-weight: 600; letter-spacing: .1px; margin-bottom: 34px;
+  }
+  .hero-photo-wrap::before { border-color: #806448; }
+  .hero .btn-primary { background: #F2E8DC; border-color: #F2E8DC; color: #2C1F14; }
+  .hero .btn-primary:hover { background: #DEC9B0; border-color: #DEC9B0; }
+  .hero .btn-ghost { color: #F2E8DC; border-color: #806448; }
+  .hero .btn-ghost:hover { background: rgba(242,232,220,.09); border-color: #C4A882; }
+  .dores { background: #35261B; }
+  .dores .section-title { color: #F2E8DC; }
+  .dores .section-title em { color: #D8B78B; }
+  .dores .section-desc { color: #D8CDC0; }
+  .dores .dor-card { background: #423124; }
+  .dores .dor-card h3 { color: #F2E8DC; }
+  .dores .dor-card p { color: #D8CDC0; }
+  .dores .dor-icon-wrap { background: #594535; }
+  .dores .dor-icon-wrap svg { stroke: #E0C6A5; }
+  .dores .dor-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,.2); }
+  .servicos { background: #FAFAF8; }
+  .sobre { background: #F5EFE6; }
+  @media (max-width: 960px) {
+    .nav-links.open { background: #2C1F14; box-shadow: 0 12px 32px rgba(0,0,0,.2); }
+    .hero { padding-top: 120px; }
+    .hero-signature { margin-bottom: 30px; }
+  }
+
+
+/* TERCEIRA OPÇÃO APROVADA: capa escura, riscos claros, serviços claros, sobre em bege, diferenciais escuros, contato claro. */
+.dores { background: #F5EFE6; }
+.dores .section-title { color: #2C1F14; }
+.dores .section-title em { color: #9E7953; }
+.dores .section-desc { color: #64584C; }
+.dores .dor-card { background: #FFF; }
+.dores .dor-card h3 { color: #2C1F14; }
+.dores .dor-card p { color: #64584C; }
+.dores .dor-icon-wrap { background: #F5EFE6; }
+.dores .dor-icon-wrap svg { stroke: #8F6B4C; }
+.dores .dor-card:hover { box-shadow: 0 20px 48px rgba(44,31,20,.1); }
+.stats .stat-number.stat-word { font-size: clamp(24px, 2.25vw, 34px); letter-spacing: -.5px; }
+
 </style>
 </head>
 <body>
@@ -571,8 +633,9 @@
 <div class="hero-inner">
 <div class="hero-text">
 <div class="hero-eyebrow">Advogada Trabalhista Empresarial · São Paulo</div>
-<h1>Risco trabalhista não é custo do negócio.<br/>É <em>falha de gestão.</em></h1>
-<p class="hero-sub">Consultoria trabalhista preventiva e assessoria jurídica contínua, aliadas à defesa estratégica de empresas em reclamações trabalhistas, recursos e execuções.</p>
+<h1>Prevenção de riscos e<br/><em>defesa estratégica</em> de empresas.</h1>
+<p class="hero-sub">Assessoria jurídica trabalhista empresarial, consultiva e contenciosa, com atuação preventiva e defesa dos interesses das empresas, por meio de soluções alinhadas à realidade de cada negócio.</p>
+<p class="hero-signature">Empresas crescem. Passivo não.</p>
 <div class="hero-buttons">
 <a class="btn-primary" href="https://wa.me/5511963036655?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20de%20risco%20trabalhista%20para%20a%20minha%20empresa." rel="noopener" target="_blank">Agende um diagnóstico</a>
 <a class="btn-ghost" href="#servicos">Conheça a atuação</a>
@@ -585,24 +648,24 @@
 </section>
 <div class="stats">
 <div class="stats-inner">
-<div class="stat reveal"><div class="stat-number">10+</div><div class="stat-label">Anos de atuação</div></div>
-<div class="stat reveal reveal-d1"><div class="stat-number">500+</div><div class="stat-label">Demandas conduzidas</div></div>
-<div class="stat reveal reveal-d2"><div class="stat-number">98%</div><div class="stat-label">Índice de satisfação</div></div>
-<div class="stat reveal reveal-d3"><div class="stat-number">BR</div><div class="stat-label">Atuação em todo o Brasil</div></div>
+<div class="stat reveal"><div class="stat-number">14</div><div class="stat-label">Anos de experiência</div></div>
+<div class="stat reveal reveal-d1"><div class="stat-number stat-word">Consultivo</div><div class="stat-label">Assessoria empresarial</div></div>
+<div class="stat reveal reveal-d2"><div class="stat-number stat-word">Contencioso</div><div class="stat-label">Defesa de empresas</div></div>
+<div class="stat reveal reveal-d3"><div class="stat-number">SP</div><div class="stat-label">Escritório em São Paulo</div></div>
 </div>
 </div>
 <section class="dores" id="dores">
 <div class="section-inner">
 <div class="section-eyebrow reveal">O cenário que você conhece</div>
 <h2 class="section-title reveal">Quanto custa <em>não</em> ter assessoria jurídica preventiva?</h2>
-<p class="section-desc reveal">Pequenos erros administrativos se transformam em passivos milionários. Se algum desses cenários é familiar, sua empresa está operando em zona de risco.</p>
+<p class="section-desc reveal">Falhas na gestão das relações de trabalho podem gerar passivos e comprometer a previsibilidade financeira. Identificar pontos de atenção é o primeiro passo para prevenir conflitos.</p>
 <div class="dores-grid">
 <div class="dor-card reveal">
 <div class="dor-icon-wrap">
 <svg viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
 </div>
 <h3>Autuações e bloqueios judiciais</h3>
-<p>Fiscalizações do MTE resultam em autos de infração que comprometem o caixa da empresa. Bloqueios pelo BacenJud paralisam operações inteiras sem aviso prévio.</p>
+<p>Fiscalizações trabalhistas podem resultar em autos de infração. Em processos judiciais, medidas de constrição de valores, inclusive pelo SISBAJUD, também exigem acompanhamento e resposta técnica.</p>
 </div>
 <div class="dor-card reveal reveal-d1">
 <div class="dor-icon-wrap">
@@ -616,7 +679,7 @@
 <svg viewbox="0 0 24 24"><line x1="12" x2="12" y1="1" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
 </div>
 <h3>Custo reativo vs. preventivo</h3>
-<p>Contratar advogado para gerenciar crises custa, em média, cinco vezes mais do que investir em prevenção contínua. A conta do litígio inclui condenações, honorários sucumbenciais e desgaste institucional.</p>
+<p>A atuação apenas após o surgimento de conflitos pode elevar custos e reduzir as alternativas disponíveis para a empresa.</p>
 </div>
 </div>
 </div>
@@ -682,12 +745,12 @@
 <div class="dif-item reveal">
 <div class="dif-num">01</div>
 <h3>Diagnóstico antes do contrato</h3>
-<p>Antes de qualquer proposta, realizamos um diagnóstico inicial dos principais riscos trabalhistas da sua empresa. Você recebe um mapa concreto de vulnerabilidades.</p>
+<p>Avaliamos inicialmente as necessidades apresentadas pela empresa para definir o escopo mais adequado da atuação consultiva ou contenciosa.</p>
 </div>
 <div class="dif-item reveal reveal-d1">
 <div class="dif-num">02</div>
 <h3>Acompanhamento por tecnologia</h3>
-<p>Monitoramento processual eletrônico permanente. Nenhum prazo perdido, nenhum bloqueio sem aviso. Relatórios periódicos de status de todas as demandas.</p>
+<p>Acompanhamento dos processos judiciais com ferramentas eletrônicas, controle de prazos e comunicação dos principais andamentos, conforme o escopo contratado.</p>
 </div>
 <div class="dif-item reveal reveal-d2">
 <div class="dif-num">03</div>
@@ -697,12 +760,12 @@
 <div class="dif-item reveal">
 <div class="dif-num">04</div>
 <h3>Honorários previsíveis</h3>
-<p>Modelo de consultoria mensal com escopo definido. Sem surpresas na fatura, sem cobrança por pergunta. Custo fixo e proporcional ao porte da operação.</p>
+<p>Modelo de consultoria mensal com escopo definido. Condições e entregas previamente estabelecidas, com previsibilidade dentro dos limites e do escopo contratado.</p>
 </div>
 <div class="dif-item reveal reveal-d1">
 <div class="dif-num">05</div>
 <h3>Escritório boutique, atendimento sênior</h3>
-<p>Seu caso é conduzido diretamente pela advogada titular. Sem repasse para estagiários ou equipes que não conhecem a operação da sua empresa.</p>
+<p>Atuação de equipe jurídica com supervisão técnica da advogada responsável, acompanhamento próximo e conhecimento das particularidades de cada empresa.</p>
 </div>
 <div class="dif-item reveal reveal-d2">
 <div class="dif-num">06</div>
@@ -717,8 +780,17 @@
 <div class="section-eyebrow reveal">Depoimentos</div>
 <h2 class="section-title reveal">Quem já trabalhou conosco <em>recomenda</em></h2>
 <p class="section-desc reveal">Avaliações reais de clientes, publicadas no perfil do escritório no Google.</p>
-<p class="section-desc reveal"><strong>5,0 · 20 avaliações no Google.</strong> <a href="https://g.page/r/CXgtNBCfq-XDEBM/review" rel="noopener" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;" target="_blank">Deixe a sua avaliação</a></p>
+<p class="section-desc reveal"><a href="https://g.page/r/CXgtNBCfq-XDEBM/review" rel="noopener" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;" target="_blank">Confira o perfil do escritório no Google</a></p>
 <div class="depoimentos-grid">
+<div class="depoimento-card reveal">
+<div class="depoimento-quote">“</div>
+<div class="depoimento-stars">★★★★★</div>
+<p class="depoimento-text">A Dra. Daniella fez um Regulamento Interno para empresa que ficou excepcional, flexível e abrangente para o cenário atual! E seu atendimento é diferenciado. Recomendo!</p>
+<div class="depoimento-author">
+<span class="depoimento-name">Vanessa Gonçalves Vicente de Araújo</span>
+<span class="depoimento-meta">Avaliação no Google · nov/2026</span>
+</div>
+</div>
 <div class="depoimento-card reveal">
 <div class="depoimento-quote">“</div>
 <div class="depoimento-stars">★★★★★</div>
@@ -793,13 +865,13 @@
 <section class="cta-section" id="contato">
 <div class="section-inner">
 <div class="section-eyebrow reveal">Próximo passo</div>
-<h2 class="section-title reveal">Solicite um Diagnóstico de Risco <em>Trabalhista</em></h2>
-<p class="section-desc reveal">Em uma conversa de 30 minutos, mapeamos os principais pontos de vulnerabilidade da sua operação e apresentamos um plano de ação objetivo.</p>
+<h2 class="section-title reveal">Converse sobre a Gestão <em>Trabalhista</em> da sua Empresa</h2>
+<p class="section-desc reveal">Apresente os desafios trabalhistas da sua empresa e conheça as possibilidades de assessoria preventiva e de defesa em demandas judiciais.</p>
 <ul class="cta-checklist reveal">
-<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Mapeamento de riscos em contratos, jornada, folha e obrigações acessórias</li>
-<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Classificação de urgência por nível de exposição financeira</li>
-<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Plano de ação com prioridades e prazos recomendados</li>
-<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Estimativa de economia com a correção preventiva dos pontos críticos</li>
+<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Identificação inicial das necessidades da empresa</li>
+<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Orientação sobre questões que demandam atenção prioritária</li>
+<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Definição do escopo de atendimento e dos próximos passos</li>
+<li><span class="check-icon"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Informações sobre formatos de assessoria e atuação contenciosa</li>
 </ul>
 <div class="cta-buttons reveal">
 <a class="whatsapp-btn" href="https://wa.me/5511963036655?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20de%20Risco%20Trabalhista%20para%20minha%20empresa." rel="noopener" target="_blank">
@@ -861,6 +933,35 @@
   window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
   const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+<style id="cookie-style">
+#cookie-aviso{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:760px;margin:0 auto;background:#2C1F14;color:#EDE5D8;border:1px solid rgba(198,168,130,.35);box-shadow:0 12px 40px rgba(0,0,0,.28);padding:18px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-family:'Inter',system-ui,sans-serif;font-size:13px;line-height:1.6}
+#cookie-aviso p{margin:0;flex:1 1 320px;color:#D8CDC0}
+#cookie-aviso a{color:#EDE5D8;text-decoration:underline;text-underline-offset:3px}
+#cookie-aviso .cookie-btns{display:flex;gap:10px;flex:0 0 auto}
+#cookie-aviso button{font:inherit;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:11px 20px;cursor:pointer;border:1px solid #EDE5D8;background:transparent;color:#EDE5D8}
+#cookie-aviso button.cookie-ok{background:#EDE5D8;color:#2C1F14}
+#cookie-aviso button:focus-visible{outline:2px solid #B8956A;outline-offset:2px}
+@media(max-width:600px){#cookie-aviso{padding:16px}#cookie-aviso .cookie-btns{width:100%}#cookie-aviso button{flex:1}}
+</style>
+<script id="cookie-script">
+(function(){
+  var KEY='cookie_consent_v1', v=null;
+  try{v=localStorage.getItem(KEY);}catch(e){}
+  function upd(ok){ if(typeof gtag==='function'){ gtag('consent','update',{analytics_storage: ok?'granted':'denied'}); } }
+  if(v==='granted'){ upd(true); return; }
+  if(v==='denied'){ return; }
+  function save(val){ try{localStorage.setItem(KEY,val);}catch(e){} }
+  function show(){
+    var d=document.createElement('div');
+    d.id='cookie-aviso'; d.setAttribute('role','dialog'); d.setAttribute('aria-label','Aviso de cookies');
+    d.innerHTML='<p>Este site usa cookies de análise (Google Analytics) para entender, de forma agregada, como as páginas são acessadas. Você pode aceitar ou recusar e continuar navegando normalmente. Saiba mais na <a href="politica-privacidade.html">Política de Privacidade</a>.</p><div class="cookie-btns"><button type="button" class="cookie-no">Recusar</button><button type="button" class="cookie-ok">Aceitar</button></div>';
+    document.body.appendChild(d);
+    d.querySelector('.cookie-ok').addEventListener('click',function(){save('granted');upd(true);d.remove();});
+    d.querySelector('.cookie-no').addEventListener('click',function(){save('denied');upd(false);d.remove();});
+  }
+  if(document.body){show();}else{document.addEventListener('DOMContentLoaded',show);}
+})();
 </script>
 </body>
 </html>
